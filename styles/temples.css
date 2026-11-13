@@ -1,0 +1,137 @@
+:root {
+    --primary-font: "Roboto", sans-serif;
+    --primary-color: rgb(23, 52, 124);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+p,
+h2,
+h4,
+a,
+figcaption {
+    font-family: var(--primary-font);
+}
+
+p,
+h2,
+h3,
+h4,
+a {
+    font-size: 16px;
+}
+
+header {
+    display: flex;
+    background-color: var(--primary-color);
+    min-height: 86px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header p {
+    color: rgb(255 255 255);
+    font-size: 32px;
+    margin-left: 20px;
+    min-width: 203px;
+}
+
+#menu {
+    font-size: 40px;
+    border: 0;
+    background: none;
+    color: rgb(255 255 255);
+    position: absolute;
+    top: 12px;
+    right: 20px;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "X";
+}
+
+header nav {
+    background-color: var(--primary-color);
+    display: none;
+    justify-content: flex-end;
+    flex-direction: column;
+    width: 100%;
+}
+
+header nav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: rgb(255 255 255);
+    font-size: 20px;
+    padding: 20px;
+    max-width: 50vw;
+}
+
+header nav a:hover {
+    text-decoration: overline;
+}
+
+.open {
+    display: flex;
+}
+
+p.open {
+    display: none;
+}
+
+header nav.open {
+    align-items: center;
+}
+
+main {
+    display: grid;
+    max-width: 800px;
+    margin: 0 auto;
+    grid: 1fr / 1fr;
+    column-gap: 10px;
+    align-self: center;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+main h1 {
+    font-family: var(--primary-font);
+    grid-column: 1/-1;
+    padding: 16px 0px;
+    font-size: 24px;
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px;
+}
+
+figure img {
+    max-width: 300px;
+}
+
+footer {
+    display: flex;
+    height: 76px;
+    background-color: var(--primary-color);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    color: rgb(255 255 255);
+}
