@@ -1,0 +1,88 @@
+:root {
+    --celeste: rgb(37, 84, 172);
+    --amarillo: rgb(234, 194, 63);
+    --primary-font: "Roboto", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+p,
+h1,
+h2 {
+    font-family: var(--primary-font);
+    font-size: 16px;
+}
+
+header {
+    display: grid;
+    width: 100%;
+    height: 80px;
+    background-color: var(--celeste);
+    align-items: center;
+    justify-content: center;
+}
+
+header p {
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+}
+
+.hero-div picture,
+.hero-div img {
+    display: block;
+    width: 100%;
+}
+
+.hero-div img {
+    height: auto;
+}
+
+.data-box,
+.weather-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid rgb(0 0 0 / 0.1);
+    height: fit-content;
+}
+
+.info-div p {
+    padding: 4px;
+}
+
+.info-div h1,
+.info-div h2 {
+    font-size: 24px;
+    margin-bottom: 22px;
+}
+
+#weather-icon {
+    margin-bottom: 22px;
+}
+
+footer {
+    display: flex;
+    height: 76px;
+    background-color: var(--celeste);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    color: rgb(255 255 255);
+}
+
+#upper-separator {
+    background-color: var(--amarillo);
+    height: 18px;
+}
+
+#lower-separator {
+    background-color: var(--celeste);
+    height: 5px;
+}

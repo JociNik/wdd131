@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 – Bariloche – Dalton Niklitschek</title>
+    <meta name="description"
+        content="This page contains information about Bariloche, Argentina. A city where the author has lived.">
+    <meta name="author" content="Dalton Niklitschek">
+
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <script src="scripts/place.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playwrite+IT+Trad:wght@100..400&family=Roboto:wght@350&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <p><strong>Bariloche</strong></p>
+    </header>
+    <div id="upper-separator"></div>
+    <main>
+        <div class="hero-div">
+            <picture>
+                <source media="(min-width: 500px)" srcset="images/hero-large.webp">
+                <img src="images/hero-small.webp" alt="Panoramic View of the Nahuel Huapi lake" width="" height="">
+            </picture>
+        </div>
+        <div id="lower-separator"></div>
+        <div class="info-div">
+            <div class="data-box">
+                <h1>Data</h1>
+                <p><strong>Population: </strong>135.755</p>
+                <p><strong>Province: </strong>Río Negro</p>
+                <p><strong>Area: </strong>220 sq km</p>
+                <p><strong>Time Zone: </strong>UTC-3</p>
+            </div>
+            <div class="weather-box">
+                <h2>Weather</h2>
+                <img id="weather-icon" src="images/weather-icon.svg" alt="Weather icon" width="50">
+                <p><strong>Temperature: </strong>7 °C</p>
+                <p><strong>Conditions: </strong>Partly Cloudy</p>
+                <p><strong>Wind: </strong>10km/h</p>
+                <p><strong>Wind Chill: </strong><span id="wind-chill-factor">Could not load</span></p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>© <span id="currentyear"></span> Dalton Niklitschek | Argentina</p>
+        <p id="lastModified">Hola</p>
+    </footer>
+</body>
+
+</html>

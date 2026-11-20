@@ -1,0 +1,36 @@
+@media (min-width: 500px) {
+    main {
+        position: relative;
+    }
+
+    .info-div {
+        display: flex;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+        justify-content: space-between;
+    }
+
+    .weather-box {
+        align-self: flex-end;
+    }
+
+    .data-box,
+    .weather-box {
+        background: rgb(255 255 255 / 60%);
+    }
+
+    .weather-box {
+        bottom: 20px;
+    }
+
+    .weather-box h2::after {
+        content: " ⛅";
+    }
+
+    #weather-icon {
+        display: none;
+    }
+}
