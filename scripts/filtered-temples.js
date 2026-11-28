@@ -92,28 +92,63 @@ const temples = [
     },
 ];
 
-const templesOld = temples.filter((temple) => {
-    const dedicationYear = Number(temple.dedicated.split(",")[0]);
-    return dedicationYear <= 1999;
-});
-
 const templesNew = temples.filter((temple) => {
     const dedicationYear = Number(temple.dedicated.split(",")[0]);
     return dedicationYear >= 2000;
 });
 
+const homeButton = document.querySelector("#homeButton");
+const oldButton = document.querySelector("#oldButton");
+const newButton = document.querySelector("#newButton");
+const largeButton = document.querySelector("#largeButton");
+const smallButton = document.querySelector("#smallButton");
 
-temples.forEach((temple) => {
-    const card = document.createElement("section");
-    card.classList.add("temple-card");
+homeButton.addEventListener("click", () => {
+    createTempleCard(temples);
+})
 
-    card.innerHTML = `
+oldButton.addEventListener("click", () => {
+    createTempleCard(temples.filter((temple) => {
+        const dedicationYear = Number(temple.dedicated.split(",")[0]);
+        return dedicationYear < 1900;
+    }));
+})
+
+newButton.addEventListener("click", () => {
+    createTempleCard(temples.filter((temple) => {
+        const dedicationYear = Number(temple.dedicated.split(",")[0]);
+        return dedicationYear > 2000;
+    }));
+})
+
+largeButton.addEventListener("click", () => {
+    createTempleCard(temples.filter((temple) => {
+        const area = Number(temple.area);
+        return area > 90000;
+    }));
+})
+
+smallButton.addEventListener("click", () => {
+    createTempleCard(temples.filter((temple) => {
+        const area = Number(temple.area);
+        return area < 10000;
+    }));
+})
+
+function createTempleCard(templesArray) {
+    main.querySelectorAll(".temple-card").forEach((card) => card.remove());
+    templesArray.forEach((temple) => {
+        const card = document.createElement("section");
+        card.classList.add("temple-card");
+
+        card.innerHTML = `
         <p class="temple-name">${temple.templeName}<p>
         <p><span>Location:</span> ${temple.location}</p>
         <p><span>Dedicated:</span> ${temple.dedicated}</p>
         <p><span>Size:</span> ${temple.area} sq ft</p>
         <img src="${temple.imageUrl}" alt="${temple.templeName} Temple" loading="lazy">
-    `;
+        `;
 
-    main.append(card);
-});
+        main.append(card);
+    });
+}
