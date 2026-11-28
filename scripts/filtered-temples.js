@@ -135,6 +135,8 @@ smallButton.addEventListener("click", () => {
     }));
 })
 
+createTempleCard(temples);
+
 function createTempleCard(templesArray) {
     main.querySelectorAll(".temple-card").forEach((card) => card.remove());
     templesArray.forEach((temple) => {
