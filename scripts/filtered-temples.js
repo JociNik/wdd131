@@ -92,6 +92,16 @@ const temples = [
     },
 ];
 
+const templesOld = temples.filter((temple) => {
+    const dedicationYear = Number(temple.dedicated.split(",")[0]);
+    return dedicationYear <= 1999;
+});
+
+const templesNew = temples.filter((temple) => {
+    const dedicationYear = Number(temple.dedicated.split(",")[0]);
+    return dedicationYear >= 2000;
+});
+
 
 temples.forEach((temple) => {
     const card = document.createElement("section");

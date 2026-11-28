@@ -113,6 +113,7 @@ main h1 {
 }
 
 .temple-card {
+    min-height: 278px;
     width: 300px;
     display: flex;
     flex-direction: column;
